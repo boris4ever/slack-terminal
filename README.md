@@ -7,9 +7,9 @@ Simple code written in go, to push messages to slack channel.
 Current version: [0.1.1](https://github.com/berkil/slack-push-message/releases/tag/0.1.1)  
 Download links:  
 - First Parser Option:
-  * [OSX](https://github.com/berkil/slack-terminal/files/1628708/slack_OSX.zip)
-  * [Linux 64Bit Arch](https://github.com/berkil/slack-terminal/files/1628707/slack_Linux_64.zip)
-  * [Linux 32Bit Arch](https://github.com/berkil/slack-terminal/files/1628706/slack_Linux_32.zip)
+  * [OSX](https://github.com/berkil/slack-terminal/files/1628708/slack_OSX.zip)  
+  * [Linux 64Bit Arch](https://github.com/berkil/slack-terminal/files/1628707/slack_Linux_64.zip)  
+  * [Linux 32Bit Arch](https://github.com/berkil/slack-terminal/files/1628706/slack_Linux_32.zip)  
 Help text:
 ~~~
 NAME:
@@ -39,8 +39,8 @@ GLOBAL OPTIONS:
 
 - Second Parser Option:
   * [OSX](https://github.com/berkil/slack-terminal/files/1628712/slack_OSX.zip)
-  * [Linux 64Bit Arch](https://github.com/berkil/slack-terminal/files/1628711/slack_Linux_64.zip)
-  * [Linux 32Bit Arch](https://github.com/berkil/slack-terminal/files/1628710/slack_Linux_32.zip)
+  * [Linux 64Bit Arch](https://github.com/berkil/slack-terminal/files/1628711/slack_Linux_64.zip)  
+  * [Linux 32Bit Arch](https://github.com/berkil/slack-terminal/files/1628710/slack_Linux_32.zip)  
 Help Text:
 ~~~
 usage: slack --message=MESSAGE --webhook=WEBHOOK --username=USERNAME --channel=CHANNEL [<flags>]
