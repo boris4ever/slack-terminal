@@ -21,8 +21,8 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "Slack Push Message"
 	app.Usage = ""
-	app.UsageText = os.Args[0] + " -m <MESSAGE> -w <WEBHOOK> -u <USERNAME> -c <CHANNEL>"
-	app.Version = "0.1.1"
+	app.UsageText = os.Args[0] + "[global options] [arguments...]"
+	app.Version = "0.1.2"
 	app.Authors = []cli.Author{
 		cli.Author{
 			Name: "Boris Bakshiyev",
@@ -31,7 +31,7 @@ func main() {
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:        "message, m",
-			Usage:       "`Message` to be sent",
+			Usage:       "The `message` to be sent",
 			Destination: &message,
 		},
 		cli.StringFlag{
@@ -76,7 +76,6 @@ func main() {
 
 	app.Run(os.Args)
 }
-
 
 func checkError(err error) {
 	if err != nil {

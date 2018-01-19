@@ -4,7 +4,7 @@ Simple code written in go, to push messages to slack channel.
 
 ---
 
-Current version: [0.1.1](https://github.com/berkil/slack-push-message/releases/tag/0.1.1)  
+Current version: [0.1.2](https://github.com/berkil/slack-push-message/releases/tag/0.1.1)  
 Download links:  
 - First Parser Option:
   * [OSX](https://github.com/berkil/slack-terminal/files/1628708/slack_OSX.zip)  
@@ -16,10 +16,10 @@ NAME:
    Slack Push Message
 
 USAGE:
-   slack -m <MESSAGE> -w <WEBHOOK> -u <USERNAME> -c <CHANNEL>
+   ./slack -m <MESSAGE> -w <WEBHOOK> -u <USERNAME> -c <CHANNEL>
 
 VERSION:
-   0.1.1
+   0.1.2
 
 AUTHOR:
    Boris Bakshiyev
