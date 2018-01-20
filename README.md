@@ -4,19 +4,19 @@ Simple code written in go, to push messages to slack channel.
 
 ---
 
-Current version: [0.1.2](https://github.com/berkil/slack-push-message/releases/tag/0.1.1)  
+Current version: [0.1.2](https://github.com/berkil/slack-push-message/releases/tag/0.1.2)  
 Download links:  
-- First Parser Option:
-  * [OSX](https://github.com/berkil/slack-terminal/files/1628708/slack_OSX.zip)  
-  * [Linux 64Bit Arch](https://github.com/berkil/slack-terminal/files/1628707/slack_Linux_64.zip)  
-  * [Linux 32Bit Arch](https://github.com/berkil/slack-terminal/files/1628706/slack_Linux_32.zip)  
-Help text:
+  * [OSX](https://github.com/berkil/slack-terminal/files/1649258/slack-cli_OSX.zip)
+  * [Linux 64Bit Arch](https://github.com/berkil/slack-terminal/files/1649257/slack-cli_Linux_64.zip)
+  * [Linux 32Bit Arch](https://github.com/berkil/slack-terminal/files/1649256/slack-cli_Linux_32.zip)  
+  
+Help text and usage:
 ~~~
 NAME:
    Slack Push Message - Enjoy sending messages through the terminal
 
 USAGE:
-   /tmp/go-build765099906/command-line-arguments/_obj/exe/main [global options] [arguments...]
+   slack-cli [global options] [arguments...]
 
 VERSION:
    0.1.2
@@ -36,23 +36,11 @@ GLOBAL OPTIONS:
    --version, -v                     print the version
 ~~~
 
----
-
-Parameters:  
-  * **message**:   The message you want to send.  
-  * **webhook**:   The slack [incoming webhook](https://api.slack.com/incoming-webhooks).
-  * **username**:  Which username will be shown for the message.    
-  * **channel**:   slack channel.  
-
----
-
-Usage:
-  `./slack --channel="<CHANNEL>" --webhook="<WEB_HOOK>" --username="<USER_NAME>" --message="<MESSAGE>"`
-
 Example:
   ~~~
-    ./slack --channel="test_channel" \
-      --webhook="https://hooks.slack.com/services/JUSTEXAMPLE/WEBHOOK/ABcdER5" \
-      --username="test_bot" \
-      --message="Test message \n New line"
+    ./slack --channel "test_channel" \
+      --webhook "https://hooks.slack.com/services/JUSTEXAMPLE/WEBHOOK/ABcdER5" \
+      --username "test_bot" \
+      --message "Test message \n New line with <https://github.com/berkil|url>" \
+      --emoji ":ant:"
   ~~~
