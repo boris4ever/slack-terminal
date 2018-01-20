@@ -17,11 +17,18 @@ var (
 	channel  string
 )
 
+
+func checkError(err error) {
+	if err != nil {
+		log.Fatal("Fatal error:", err.Error())
+	}
+}
+
 func main() {
 	app := cli.NewApp()
 	app.Name = "Slack Push Message"
-	app.Usage = ""
-	app.UsageText = os.Args[0] + "[global options] [arguments...]"
+	app.Usage = "Enjoy sending messages through the terminal"
+	app.UsageText = os.Args[0] + " [global options] [arguments...]"
 	app.Version = "0.1.2"
 	app.Authors = []cli.Author{
 		cli.Author{
@@ -52,6 +59,10 @@ func main() {
 	}
 
 	app.Action = func(c *cli.Context) error {
+		if len(os.Args) == 1 {
+			cli.ShowSubcommandHelp(c)
+			return nil
+		}
 		emoji := ":sos:"
 		channelToUse := "#" + channel
 		payLoad := []byte("{\"channel\": \"" + channelToUse + "\", \"username\": \"" + userName + "\", \"text\": \"" + message + "\", \"icon_emoji\": \"" + emoji + "\"}")
@@ -75,10 +86,4 @@ func main() {
 	}
 
 	app.Run(os.Args)
-}
-
-func checkError(err error) {
-	if err != nil {
-		log.Fatal("Fatal error:", err.Error())
-	}
 }
