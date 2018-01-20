@@ -11,11 +11,11 @@ import (
 )
 
 var (
-	message  string
-	webhook  string
-	userName string
 	channel  string
 	emoji    string
+	message  string
+	userName string
+	webhook  string
 )
 
 func checkError(err error) {
@@ -37,21 +37,6 @@ func main() {
 	}
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
-			Name:        "message, m",
-			Usage:       "The `message` to be sent",
-			Destination: &message,
-		},
-		cli.StringFlag{
-			Name:        "webhook, w",
-			Usage:       "The slack `webhook`",
-			Destination: &webhook,
-		},
-		cli.StringFlag{
-			Name:        "username, u",
-			Usage:       "The `username` which will be shown as the sender",
-			Destination: &userName,
-		},
-		cli.StringFlag{
 			Name:        "channel, c",
 			Usage:       "The `channel` to send the message too",
 			Destination: &channel,
@@ -62,15 +47,29 @@ func main() {
 			Value:       ":sos:",
 			Destination: &emoji,
 		},
+		cli.StringFlag{
+			Name:        "message, m",
+			Usage:       "The `message` to be sent",
+			Destination: &message,
+		},
+		cli.StringFlag{
+			Name:        "username, u",
+			Usage:       "The `username` which will be shown as the sender",
+			Destination: &userName,
+		},
+		cli.StringFlag{
+			Name:        "webhook, w",
+			Usage:       "The slack `webhook`",
+			Destination: &webhook,
+		},
 	}
 
 	app.Action = func(c *cli.Context) error {
 		if len(os.Args) == 1 {
-			cli.ShowSubcommandHelp(c)
-			return nil
+			errorMessage := os.Args[0] + ": missing arguments\nTry '" + os.Args[0] + " --help' for more information."
+			return cli.NewExitError(errorMessage, 1)
 		}
 
-		// emoji := ":sos:"
 		channelToUse := "#" + channel
 		payLoad := []byte("{\"channel\": \"" + channelToUse + "\", \"username\": \"" + userName + "\", \"text\": \"" + message + "\", \"icon_emoji\": \"" + emoji + "\"}")
 
