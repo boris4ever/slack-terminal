@@ -38,7 +38,7 @@ func main() {
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:        "channel, c",
-			Usage:       "The `channel` to send the message too",
+			Usage:       "The `channel` to send the message to",
 			Destination: &channel,
 		},
 		cli.StringFlag{
