@@ -15,8 +15,8 @@ var (
 	webhook  string
 	userName string
 	channel  string
+	emoji    string
 )
-
 
 func checkError(err error) {
 	if err != nil {
@@ -56,6 +56,12 @@ func main() {
 			Usage:       "The `channel` to send the message too",
 			Destination: &channel,
 		},
+		cli.StringFlag{
+			Name:        "emoji, e",
+			Usage:       "The emoji that will apear next to the username",
+			Value:       ":sos:",
+			Destination: &emoji,
+		},
 	}
 
 	app.Action = func(c *cli.Context) error {
@@ -63,7 +69,8 @@ func main() {
 			cli.ShowSubcommandHelp(c)
 			return nil
 		}
-		emoji := ":sos:"
+
+		// emoji := ":sos:"
 		channelToUse := "#" + channel
 		payLoad := []byte("{\"channel\": \"" + channelToUse + "\", \"username\": \"" + userName + "\", \"text\": \"" + message + "\", \"icon_emoji\": \"" + emoji + "\"}")
 
