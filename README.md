@@ -9,8 +9,10 @@ Download links:
   * [OSX](https://github.com/berkil/slack-terminal/files/1649258/slack-cli_OSX.zip)
   * [Linux 64Bit Arch](https://github.com/berkil/slack-terminal/files/1649257/slack-cli_Linux_64.zip)
   * [Linux 32Bit Arch](https://github.com/berkil/slack-terminal/files/1649256/slack-cli_Linux_32.zip)  
-  
-Help text and usage:
+
+---
+
+Help and usage:
 ~~~
 NAME:
    Slack Push Message - Enjoy sending messages through the terminal
