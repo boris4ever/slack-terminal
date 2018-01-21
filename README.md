@@ -6,9 +6,9 @@ Simple code written in go, to push messages to slack channel.
 
 Current version: [0.2.0](https://github.com/berkil/slack-push-message/releases/tag/0.2.0)  
 Download links:  
-  * [OSX](https://github.com/berkil/slack-terminal/files/1649258/slack-cli_OSX.zip)
-  * [Linux 64Bit Arch](https://github.com/berkil/slack-terminal/files/1649257/slack-cli_Linux_64.zip)
-  * [Linux 32Bit Arch](https://github.com/berkil/slack-terminal/files/1649256/slack-cli_Linux_32.zip)  
+  * [OSX](https://github.com/berkil/slack-terminal/files/1650143/slack-cli_OSX.zip)
+  * [Linux 64Bit Arch](https://github.com/berkil/slack-terminal/files/1650142/slack-cli_Linux_64.zip)
+  * [Linux 32Bit Arch](https://github.com/berkil/slack-terminal/files/1650141/slack-cli_Linux_32.zip)  
 
 ---
 
