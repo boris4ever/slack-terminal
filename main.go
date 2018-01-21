@@ -66,8 +66,8 @@ func main() {
 
 	app.Action = func(c *cli.Context) error {
 		if len(os.Args) == 1 {
-			errorMessage := os.Args[0] + ": missing arguments\nTry '" + os.Args[0] + " --help' for more information."
-			return cli.NewExitError(errorMessage, 1)
+			cli.ShowAppHelp(c)
+			return nil
 		}
 
 		channelToUse := "#" + channel
