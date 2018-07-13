@@ -1,6 +1,5 @@
-theme: jekyll-theme-cayman
-
 title: Slack CLI
 description: Simple CLI to push slack messages.
 show_downloads: true
 google_analytics:
+theme: jekyll-theme-cayman
