@@ -1,4 +1,5 @@
----
+[![Go Report Card](https://goreportcard.com/badge/github.com/berkil/slack-terminal)](https://goreportcard.com/report/github.com/berkil/slack-terminal)  
+
 
 Simple code written in go, to push messages to slack channel.
 
