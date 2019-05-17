@@ -1,17 +1,7 @@
----
----
-
-- A simple CLI tool to enable slack integration,
-- Can be used for any CI/CD procedures, or any other automated pipelines.
-- Simply download the binary and use it.
-
----
-
-For any suggestions or issues, you are welcome to submit it [here](https://github.com/berkil/slack-terminal/issues/new)
-
----
-
 [![Go Report Card](https://goreportcard.com/badge/github.com/berkil/slack-terminal)](https://goreportcard.com/report/github.com/berkil/slack-terminal)  
+
+
+Simple code written in go, to push messages to slack channel.
 
 ---
 
