@@ -5,5 +5,5 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: > 
-          echo "This is env secret: {{ secret.ENV_DEMO_SECRET }}"
-          echo "This is action secret: {{ secret.DEMO_SECRET }}"
+          echo "This is env secret: "{{ secret.ENV_DEMO_SECRET }}\n
+          echo "This is action secret: " {{ secret.DEMO_SECRET }}
