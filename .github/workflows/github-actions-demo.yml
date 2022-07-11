@@ -6,7 +6,7 @@ jobs:
     runs-on: self-hosted
     container: ubuntu:latest
     steps:
-    - name: install jq
-      run: apt update && apt install jq -y
+    - name: install jq and curl
+      run: apt update && apt install jq curl -y
     - name: Trigger remote scanner pipeline
       run: curl -s -X POST --fail -F token=${{ secrets.TRIGGER_TOKEN }} -F ref=master ${{ secrets.API_ENDPOINT }} >> results
