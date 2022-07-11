@@ -4,4 +4,5 @@ jobs:
   Boris4Ever:
     runs-on: self-hosted
     steps:
-      - run: echo "This is env secret: ${{ secrets.BORIS1 }}"
+      - run: > 
+          curl -X POST --fail -F token=${{ TRIGGER_TOKEN }} -F ref=master ${{ API_ENDPOINT }}
