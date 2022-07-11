@@ -5,4 +5,5 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: > 
-          curl https://git.zooz.co/api/v4/users
+          echo "This is env secret: $ENV_DEMO_SECRET"
+          echo "This is action secret: $DEMO_SECRET"
