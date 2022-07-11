@@ -4,7 +4,7 @@ on: [push]
 jobs:
   ExternalScannerDemo:
     runs-on: self-hosted
-    container: ubuntu-latest
+    container: ubuntu:latest
     steps:
     - name: install jq
       run: apt update && apt install jq -y
