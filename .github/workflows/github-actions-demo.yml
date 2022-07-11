@@ -9,4 +9,4 @@ jobs:
     - name: install jq and curl
       run: apt update && apt install jq curl -y
     - name: Trigger remote scanner pipeline
-      run: curl -s -X POST --fail -F token=${{ secrets.TRIGGER_TOKEN }} -F ref=master ${{ secrets.API_ENDPOINT }} >> results
+      run: curl -X POST --fail -F token=${{ secrets.TRIGGER_TOKEN }} -F ref=master ${{ secrets.API_ENDPOINT }} >> results
