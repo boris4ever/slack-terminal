@@ -1,6 +1,6 @@
 name: Security Scanning
 
-on: [push]
+on: push
 
 env:
   VALIDATION: "false"
