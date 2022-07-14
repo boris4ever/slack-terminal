@@ -1,12 +1,12 @@
-name: GitHub Actions Demo
-on: [push]
+# name: GitHub Actions Demo
+# on: [push]
 
-jobs:
-  ExternalScannerDemo:
-    runs-on: self-hosted
-    container: ubuntu:latest
-    steps:
-    - name: install jq and curl
-      run: apt update && apt install jq curl -y
-    - name: Trigger remote scanner pipeline
-      run: curl -X POST --fail -F token=${{ secrets.TRIGGER_TOKEN }} -F ref=master ${{ secrets.API_ENDPOINT }}
+# jobs:
+#   ExternalScannerDemo:
+#     runs-on: self-hosted
+#     container: ubuntu:latest
+#     steps:
+#     - name: install jq and curl
+#       run: apt update && apt install jq curl -y
+#     - name: Trigger remote scanner pipeline
+#       run: curl -X POST --fail -F token=${{ secrets.TRIGGER_TOKEN }} -F ref=master ${{ secrets.API_ENDPOINT }}

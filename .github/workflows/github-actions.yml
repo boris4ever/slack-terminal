@@ -1,0 +1,15 @@
+name: Security Scanning
+
+on: [push]
+
+env:
+  VALIDATION: "false"
+
+jobs:
+  security-validation:
+    runs-on: self-hosted
+    container: docker-registry.zooz.co:4567/payu-clan-security/images/security-template-validator/security-template-validator/release:v1.1.0
+    steps:
+      - run: node /home/node/app/src/app.js `pwd`
+      - run: aws --region eu-central-1 s3 cp gl-sec-reports "s3://zooz-security-poc-dev/${CI_PROJECT_PATH}/-${CI_COMMIT_BRANCH}/${CI_PIPELINE_ID}/$CI_JOB_ID/" --recursive
+      - run: jq --color-output . gl-sec-reports/fullReport.json
